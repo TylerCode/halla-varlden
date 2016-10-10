@@ -1,4 +1,4 @@
 # halla-varlden
-hello world script, stash ideas and running through the github guide
 
-Probably will delete repo after this, but its fun. Not sure what I'll actually do with the account as I'd love to participate and maybe revive some abandoned projects.
+
+Place to stash lonely single file scripts that I'd like to share if someone needs one. (or if someone stumbles upon it.) Enjoy.
