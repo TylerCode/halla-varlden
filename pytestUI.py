@@ -1,8 +1,10 @@
 # A small test/example of making a user interface with Python. Useful especially for 
 # the raspberry pi. (When you have half a dozen of the things, you never get bored)
 
-from Tkinter import Tk, BOTH
+
+from Tkinter import Tk, RIGHT, BOTH, RAISED
 from ttk import Frame, Button, Style
+
 
 class Taco(Frame):
   
@@ -10,27 +12,30 @@ class Taco(Frame):
         Frame.__init__(self, parent)   
          
         self.parent = parent
-        
         self.initUI()
-        
+
         
     def initUI(self):
       
-        self.parent.title("Tacos for days")
+        self.parent.title("Taco Time")
         self.style = Style()
         self.style.theme_use("default")
-
-        self.pack(fill=BOTH, expand=1)
-
-        quitButton = Button(self, text="Quit",
-            command=self.quit)
-        quitButton.place(x=5, y=5)
-
+        
+        frame = Frame(self, relief=RAISED, borderwidth=1)
+        frame.pack(fill=BOTH, expand=True)
+        
+        self.pack(fill=BOTH, expand=True)
+        
+        closeButton = Button(self, text="Close", command=self.quit()) ## NOPE
+        closeButton.pack(side=RIGHT, padx=5, pady=5)
+        okButton = Button(self, text="OK", command=self.quit()) #Surprise Motherf***er!!!
+        okButton.pack(side=RIGHT)
+              
 
 def main():
   
     root = Tk()
-    root.geometry("250x150+300+300")
+    root.geometry("300x200+300+300")
     app = Taco(root)
     root.mainloop()  
 
