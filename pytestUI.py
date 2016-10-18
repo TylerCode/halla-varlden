@@ -1,6 +1,6 @@
 # A small test/example of making a user interface with Python. Useful especially for 
 # the raspberry pi. (When you have half a dozen of the things, you never get bored)
-
+# Will probably just use this as a reference from now on. 
 
 from Tkinter import Tk, RIGHT, BOTH, RAISED
 from ttk import Frame, Button, Style
