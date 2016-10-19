@@ -2,10 +2,6 @@
 # the raspberry pi. (When you have half a dozen of the things, you never get bored)
 # Will probably just use this as a reference from now on. 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
 from Tkinter import Tk, RIGHT, BOTH, RAISED
 from ttk import Frame, Button, Style
 
