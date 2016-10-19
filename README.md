@@ -1,4 +1,4 @@
 # halla-varlden
 
 
-Place to stash lonely single file scripts that I'd like to share if someone needs one. (or if someone stumbles upon it.) Enjoy.
+Place to stash learning scripts for Python. Just getting more familiar with the language and hoping my scripts can be used as examples or references for other people.
