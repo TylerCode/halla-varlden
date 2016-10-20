@@ -1,5 +1,9 @@
 # almost couldnt remember how to python
 # mostly just a small example
+# small example to show the basics to learning programmers
+
+print "This will do very basic math. Input your problem like this <Number> <Operator> <Number>"
+inputString = str(raw_input("input: ")) #The input string
 
 # the functions for operations
 
@@ -18,4 +22,5 @@ def divide (num1,num2)
 # the other functions
 
 def tryParse (s)
-	#TODO: parse code
+	if(inputString.find("+") -not -1)
+		#Do stuff
