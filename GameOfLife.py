@@ -1,1 +1,1 @@
-#Will run the famous "Game of Life"
+#Will run the famous "Conway's Game of Life"
