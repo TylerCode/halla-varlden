@@ -28,7 +28,7 @@ def update(frameNumber, img, grid, N):
         for j in range(N):
             # Neighbor Sum calculation
             #x and y wrapping
-            total = int((grid[i, (j-1)%N] + grid[i, (j+1)%N] + grid[(i-1)%N, j] + grid[(i+1)%N, j] + grid[(i-1)%N, (j-1)%N] + grid[(i-1)%N, (j+1)%N] + (j+1)%N])/255)
+            total = int((grid[i, (j-1)%N] + grid[i, (j+1)%N] + grid[(i-1)%N, j] + grid[(i+1)%N, j] + grid[(i-1)%N, (j-1)%N] + grid[(i-1)%N, (j+1)%N] + grid[(i+1)%N, (j-1)%N] + grid[(i+1)%N, (j+1)%N])/255)
 
             # Now we apply conway's rules
             if grid[i, j] == ON:
@@ -64,16 +64,16 @@ def main():
     if args.interval:
         updateInterval = args.interval
 
-    grid = np.array([])
+    grid = numpy.array([])
     if args.glider:
         grid = numpy.zeros(N*N).reshape(N,N)
         addGlider()
     else:
         grid = randomStart(N)
 
-    fig, ag = pyplot.subplots()
+    fig, ax = pyplot.subplots()
     img = ax.imshow(grid, interpolation='nearest')
-    ani = animation.FuncAnimation(fig,update,fargs=(img,grid,N, ), frames=10, interval.updateInterval, save_count=50)
+    ani = animation.FuncAnimation(fig, update, fargs=(img, grid, N, ), frames=10, interval=updateInterval, save_count=50)
 
     if args.movfile:
         ani.save(args.movfile, fps=30, extra_args=['-vcodec', 'libx264'])
@@ -82,7 +82,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-grid = np.zeros(N*N).reshape(N,N)
-addGlider(1,1, grid)
