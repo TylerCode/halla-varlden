@@ -1,4 +1,5 @@
 # halla-varlden
 
+Collection of "Hello World" style scripts and programs. Previously dedicated to just Python, most of this stuff is ancient. 
 
-Place to stash learning scripts for Python. Just getting more familiar with the language and hoping my scripts can be used as examples or references for other people.
+
